@@ -35,7 +35,6 @@ All notable changes to this project will be documented in this file.
 -   Switched from `{{ csrf_field() }}` to `@csrf` directive
 -   Restructured model factories to use the new class-based approach
 -   Updated routing syntax to use `::class` notation for controller references
--   Moved models to `App\Models` directory
 -   Removed unnecessary JavaScript files to optimize the codebase
 
 ### Fixed
@@ -57,7 +56,6 @@ All notable changes to this project will be documented in this file.
 ### Changed
 
 -   Minimum PHP requirement raised to 7.3
--   Models placed in `App\Models` directory by default
 -   Route definitions updated to use `::class` syntax
 
 ## Laravel 7.x - 2025-02-08

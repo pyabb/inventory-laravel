@@ -8,6 +8,10 @@ and has been adapted for easier installation in environments such as XAMPP, cPan
 
 This project has been progressively upgraded from Laravel 5.5 to 10.x. See [CHANGELOG.md](CHANGELOG.md) for the full history of changes per version.
 
+## Branching Strategy
+
+This project follows the Gitflow workflow. The `main` branch is the primary branch and should be used for production-ready code. The `develop` branch is intended for development work. Currently, both branches are at the same state.
+
 ## Installation
 
 * [Docker installation](#Docker-installation)

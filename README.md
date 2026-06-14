@@ -154,7 +154,7 @@ It's recommended to first generate and set up the entire project locally, and th
 ### Server Configuration
 After uploading the project to your server:
 
-* In your cPanel, set the PHP version to 8.2. While Laravel 9 requires PHP 8.0+, this project is optimized for PHP 8.2.
+* In your cPanel, set the PHP version to 8.2. While Laravel 10 requires the minimum PHP 8.1+, this project is optimized for PHP 8.2.
 * Copy the .env.example file and rename it to .env on the server (or upload your pre-configured .env file). Then, update the credentials and settings according to your environment.
 * Generate a new application key for security:
   ```shell
@@ -201,7 +201,7 @@ When uploading to the server, exclude the following directories and files:
 ## Xampp installation
 The project configuration only allows installation in the htdocs folder and not in child folders.
 <br>
-This project requires PHP version 8.0 or higher for Laravel 9, with PHP 8.2 being the preferred version. It is recommended to download XAMPP with PHP version 8.2 for optimal compatibility.
+This project requires the minimum PHP version 8.1 or higher for Laravel 10, with PHP 8.2 being the preferred version. It is recommended to download XAMPP with PHP version 8.2 for optimal compatibility.
 
 ### Local Development Setup
 

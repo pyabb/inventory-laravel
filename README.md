@@ -12,6 +12,15 @@ This project has been progressively upgraded from Laravel 5.5 to 10.x. See [CHAN
 
 This project follows the Gitflow workflow. The `main` branch is the primary branch and should be used for production-ready code. The `develop` branch is intended for development work. Currently, both branches are at the same state.
 
+### Laravel 9 Upgrade Changes
+* Laravel 9 requires PHP 8.0 or higher. (This project uses PHP 8.2)
+* The project has been migrated from Vue 2 to Vue 3, which includes breaking changes in the Vue API.
+* Webpack has been replaced with Vite for faster and more efficient asset building.
+* Unnecessary JavaScript files have been removed to optimize the codebase.
+* Laravel Sail has been added for a more consistent development environment.
+* Database migrations and seeders are now used for both development and production environments, with specific seeders for each environment.
+* In resources/js/bootstrap.js, the project attempts to import 'bootstrap', 'popper.js', and 'jquery', but these dependencies are not installed in node_modules. This doesn't cause build failures but will be removed in Laravel 10.
+
 ## Installation
 
 * [Docker installation](#Docker-installation)

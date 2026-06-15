@@ -1,4 +1,3 @@
-namespace database\migrations;
 <?php
 
 use Illuminate\Support\Facades\Schema;

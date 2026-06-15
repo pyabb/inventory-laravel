@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Sell;
+use App\Models\Sell;
 use Illuminate\Http\Request;
 
 class SellController extends Controller
@@ -41,7 +41,7 @@ class SellController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Sell  $sell
+     * @param  \App\Models\Sell  $sell
      * @return \Illuminate\Http\Response
      */
     public function show(Sell $sell)
@@ -52,7 +52,7 @@ class SellController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Sell  $sell
+     * @param  \App\Models\Sell  $sell
      * @return \Illuminate\Http\Response
      */
     public function edit(Sell $sell)
@@ -64,7 +64,7 @@ class SellController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Sell  $sell
+     * @param  \App\Models\Sell  $sell
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Sell $sell)
@@ -75,7 +75,7 @@ class SellController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Sell  $sell
+     * @param  \App\Models\Sell  $sell
      * @return \Illuminate\Http\Response
      */
     public function destroy(Sell $sell)

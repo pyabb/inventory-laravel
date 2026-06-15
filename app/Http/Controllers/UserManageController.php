@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\User;
-use Hash;
+use App\Models\User;
 use Auth;
+use Hash;
+use Illuminate\Http\Request;
 
 class UserManageController extends Controller
 {

@@ -2,20 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
-use App\Category;
-use App\Product;
-use App\Stock;
+use App\Models\Category;
+use App\Models\Company;
+use App\Models\Customer;
+use App\Models\Payment;
+use App\Models\Product;
+use App\Models\Sell;
+use App\Models\SellDetails;
+use App\Models\Stock;
 use App\StockDetails;
-use App\Vendor;
-use App\Customer;
-use App\Sell;
-use App\SellDetails;
-use App\Payment;
-use App\Company;
-use DB;
 use Auth;
+use DB;
+use Illuminate\Http\Request;
 
 class InvoiceController extends Controller
 {

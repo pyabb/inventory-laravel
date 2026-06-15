@@ -2,13 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Payment;
-use Illuminate\Http\Request;
-use App\Sell;
-use App\SellDetails;
+use App\Models\Payment;
+use App\Models\Sell;
 use Auth;
-
 use DB;
+use Illuminate\Http\Request;
 
 class PaymentController extends Controller
 {
@@ -90,7 +88,7 @@ class PaymentController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Payment  $payment
+     * @param  \App\Models\Payment  $payment
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -107,7 +105,7 @@ class PaymentController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Payment  $payment
+     * @param  \App\Models\Payment  $payment
      * @return \Illuminate\Http\Response
      */
     public function edit(Payment $payment)
@@ -119,7 +117,7 @@ class PaymentController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Payment  $payment
+     * @param  \App\Models\Payment  $payment
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Payment $payment)
@@ -130,7 +128,7 @@ class PaymentController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Payment  $payment
+     * @param  \App\Models\Payment  $payment
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

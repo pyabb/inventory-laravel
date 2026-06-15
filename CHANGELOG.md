@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## Laravel 10.x - 2026-06-15
+
+### Changed
+
+-   Restructured Eloquent models into a dedicated `app/Models` directory, following the default Laravel 10 directory structure
+-   Updated model namespace references throughout controllers and models for consistency with the new `App\Models` namespace
+
 ## Laravel 10.x - 2026-06-13
 
 ### Changed

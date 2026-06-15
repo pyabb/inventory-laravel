@@ -2,11 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Company;
-use App\Menu;
-use App\Permission;
-use App\Role;
-use App\User;
+use App\Models\Company;
+use App\Models\Menu;
+use App\Models\Permission;
+use App\Models\Role;
+use App\Models\User;
 use Database\Data\Menu as MenuData;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;

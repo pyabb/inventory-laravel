@@ -2,19 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Category;
-use App\Customer;
-use App\Payment;
-use App\Product;
-use App\Sell;
-use App\SellDetails;
-use App\Stock;
-use App\User;
-use App\Vendor;
-use App\Company;
-use DB;
+use App\Models\Category;
+use App\Models\Company;
+use App\Models\Customer;
+use App\Models\Sell;
+use App\Models\SellDetails;
+use App\Models\Stock;
+use App\Models\User;
+use App\Models\Vendor;
 use Auth;
+use DB;
+use Illuminate\Http\Request;
 
 class ReportingController extends Controller
 {

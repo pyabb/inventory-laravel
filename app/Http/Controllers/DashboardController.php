@@ -2,14 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Customer;
+use App\Models\Product;
+use App\Models\Sell;
+use App\Models\SellDetails;
+use App\Models\Stock;
+use App\Models\Vendor;
 use Illuminate\Http\Request;
-use App\Sell;
-use App\SellDetails;
-use App\Product;
-use App\Stock;
-use App\Category;
-use App\Vendor;
-use App\Customer;
 
 class DashboardController extends Controller
 {

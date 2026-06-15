@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Vendor;
+use App\Models\Vendor;
+use Auth;
 use Illuminate\Http\Request;
 use Session;
 use Validator;
-use Auth;
 
 class VendorController extends Controller
 {
@@ -96,7 +96,7 @@ class VendorController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Vendor  $vendor
+     * @param  \App\Models\Vendor  $vendor
      * @return \Illuminate\Http\Response
      */
     public function show(Vendor $vendor)
@@ -107,7 +107,7 @@ class VendorController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Vendor  $vendor
+     * @param  \App\Models\Vendor  $vendor
      * @return \Illuminate\Http\Response
      */
     public function edit(Vendor $supplier)
@@ -119,7 +119,7 @@ class VendorController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Vendor  $vendor
+     * @param  \App\Models\Vendor  $vendor
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request,$id)
@@ -153,7 +153,7 @@ class VendorController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Vendor  $vendor
+     * @param  \App\Models\Vendor  $vendor
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

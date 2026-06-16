@@ -1,4 +1,3 @@
-namespace database\migrations;
 <?php
 
 use Illuminate\Support\Facades\Schema;
@@ -16,9 +15,9 @@ class CreateStocksTable extends Migration
     {
         Schema::create('stocks', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('category_id');
             $table->string('product_code');
             $table->integer('product_id');
-            $table->integer('category_id');
             $table->integer('vendor_id');
             $table->integer('user_id');
             $table->string('chalan_no');

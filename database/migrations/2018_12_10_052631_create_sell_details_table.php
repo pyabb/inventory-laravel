@@ -27,10 +27,10 @@ class CreateSellDetailsTable extends Migration
             $table->integer('sold_quantity');
             $table->double('buy_price');
             $table->double('sold_price');
-            $table->double('total_buy_price')->comments = 'sold_qty * buy_price';
-            $table->double('total_sold_price')->comments = 'sold_qty * sold_price';
+            $table->double('total_buy_price')->comment('sold_qty * buy_price');
+            $table->double('total_sold_price')->comment('sold_qty * sold_price');
             $table->double('discount');
-            $table->tinyInteger('discount_type')->comments = "1 = amount , 2 = percent";
+            $table->tinyInteger('discount_type')->comment('1 = amount, 2 = percent');
             $table->double('discount_amount');
             $table->timestamps();
         });

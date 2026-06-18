@@ -30,28 +30,28 @@ class User extends Authenticatable
 
     public function stock()
     {
-        return $this->hasMany('App\Stock');
+        return $this->hasMany('App\Models\Stock');
     }
 
     public function Sell()
     {
-        return $this->hasMany('App\Sell');
+        return $this->hasMany('App\Models\Sell');
     }
 
     public function payment()
     {
-        return $this->hasMany('App\Payment');
+        return $this->hasMany('App\Models\Payment');
     }
 
 
     public function sell_details()
     {
-        return $this->hasMany('App\SellDetails');
+        return $this->hasMany('App\Models\SellDetails');
     }
 
     public function role()
     {
-        return $this->belongsTo('App\Role')->withDefault([
+        return $this->belongsTo('App\Models\Role')->withDefault([
             'id' => 0,
             'role_name' => 'Guest Role',
         ]);

@@ -12,6 +12,29 @@ This project has been progressively upgraded from Laravel 5.5 to 10.x. See [CHAN
 
 This project follows the Gitflow workflow. The `main` branch is the primary branch and should be used for production-ready code. The `develop` branch is intended for development work. Currently, both branches are at the same state.
 
+## Database Seeding
+
+This project provides two different seeders, so you can choose between populating the database with sample data or starting with a clean installation. **You don't pick the seeder manually** — `DatabaseSeeder` selects it automatically based on the `APP_ENV` environment variable defined in your `.env` file:
+
+* `APP_ENV=production` → runs `ProductionSeeder`
+* any other value (e.g. `APP_ENV=local`) → runs `DevelopmentSeeder`
+
+So the recommended way to seed the database is always the same command, and the environment decides which data is inserted:
+
+```shell
+php artisan db:seed
+```
+
+### Development seeder (`DevelopmentSeeder`)
+
+Used when `APP_ENV` is **not** `production`. Intended **only for testing and local development**. It fills the system with sample data (companies, categories, products, vendors, customers, stocks, sells, payments, permissions, etc.) so you can explore and test every feature without having to create records manually.
+
+### Production seeder (`ProductionSeeder`)
+
+Used when `APP_ENV=production`. Ideal for **production environments**. It leaves the database clean, creating only the minimum data required to log in and operate: a default company and a single Super Administrator user (along with its role and menu permissions). No sample data is inserted.
+
+> Note: The default Super Administrator credentials are listed in the [Default Credentials](#default-credentials) section.
+
 ## Installation
 
 * [Docker installation](#Docker-installation)
@@ -86,9 +109,8 @@ Generate the application key:
 Run database migrations and seeders.
 ```shell
 ./vendor/bin/sail artisan migrate
-./vendor/bin/sail artisan db:seed --class=DevelopmentSeeder  # For development environment
-# OR
-./vendor/bin/sail artisan db:seed --class=ProductionSeeder   # For production environment
+# The seeder is chosen automatically based on APP_ENV (see "Database Seeding" section)
+./vendor/bin/sail artisan db:seed
 ```
 
 Install NPM dependencies and build assets with Vite.
@@ -163,7 +185,8 @@ After uploading the project to your server:
 * Run database migrations and seeders:
   ```shell
   php artisan migrate
-  php artisan db:seed --class=ProductionSeeder
+  # With APP_ENV=production, this runs ProductionSeeder automatically (see "Database Seeding" section)
+  php artisan db:seed
   ```
 * If you didn't upload the vendor directory, install Composer dependencies on the server:
   ```shell
@@ -218,7 +241,8 @@ This project requires the minimum PHP version 8.1 or higher for Laravel 10, with
 * Run database migrations and seeders:
   ```shell
   php artisan migrate
-  php artisan db:seed --class=DevelopmentSeeder  # For development environment
+  # With APP_ENV=local, this runs DevelopmentSeeder automatically (see "Database Seeding" section)
+  php artisan db:seed
   ```
 * Install NPM dependencies and build assets with Vite:
   ```shell
